@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo } from "react";
 import FlightSearchForm from "@/components/FlightSearchForm";
 import FlightResultCard from "@/components/FlightResultCard";
 import PriceGraph from "@/components/PriceGraph";
