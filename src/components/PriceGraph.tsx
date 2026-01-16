@@ -58,7 +58,10 @@ export default function PriceGraph({ data }: PriceGraphProps) {
                 boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)',
                 padding: '8px 12px'
               }}
-              formatter={(value: number) => [`$${value}`, 'Price']}
+              formatter={(value: number | undefined) => {
+                if (value === undefined) return ['N/A', 'Price'];
+                return [`$${value}`, 'Price'];
+              }}
             />
             <Area
               type="monotone"
